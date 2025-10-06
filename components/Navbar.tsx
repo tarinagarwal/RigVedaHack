@@ -18,6 +18,7 @@ export default function Navbar() {
     { href: "/quiz", label: "Quiz" },
     { href: "/explore", label: "Explore" },
     { href: "/translations", label: "Translations" },
+    { href: "/mantras", label: "Mantras" },
   ];
 
   return (
