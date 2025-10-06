@@ -59,31 +59,7 @@ export default function ExploreInterface({ verses }: Props) {
   return (
     <div className="max-w-7xl mx-auto">
       <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-orange-200/50 mb-6">
-        {/* Text Search */}
-        <div className="flex gap-3 mb-6">
-          <Input
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            onKeyPress={(e) => e.key === "Enter" && handleSearch()}
-            placeholder="Search Suktas..."
-            className="flex-1 h-12 px-4 rounded-xl border-2 border-orange-200 focus:border-orange-400 bg-white"
-          />
-          <Button
-            onClick={handleSearch}
-            className="h-12 px-6 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white rounded-xl btn-hover shadow-lg"
-          >
-            Search
-          </Button>
-          {(filteredVerses.length > 0 || selectedMandala) && (
-            <Button
-              variant="outline"
-              onClick={clearFilters}
-              className="h-12 px-6 border-2 border-orange-300 text-orange-900 hover:bg-orange-100 rounded-xl"
-            >
-              Clear
-            </Button>
-          )}
-        </div>
+       
 
         {/* Mandala Filter */}
         <div className="mb-6">
