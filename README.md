@@ -33,11 +33,11 @@ Features:
 - Lazy loading for optimal performance
 - Smart caching system
 
-### 💬 AI Chat (Coming Soon)
+### 💬 AI Chat
 
 Interactive AI assistant to answer questions about the Rigveda and Vedic philosophy.
 
-### 🎯 Quiz (Coming Soon)
+### 🎯 Quiz
 
 Test your knowledge of Rigveda with interactive quizzes.
 
