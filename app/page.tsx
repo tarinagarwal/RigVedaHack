@@ -30,7 +30,7 @@ export default function Home() {
               Ancient Wisdom, Modern Intelligence
             </p>
             <p className="text-sm text-orange-800/50">
-              Built with ❤️ for preserving and sharing Vedic knowledge
+              Built by Tarin Agarwal and Srividya Davuluri
             </p>
           </div>
         </div>
