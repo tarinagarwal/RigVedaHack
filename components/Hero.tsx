@@ -11,13 +11,13 @@ export default function Hero() {
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-orange-300/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-coral-300/20 rounded-full blur-3xl animate-float"></div>
         <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-amber-300/20 rounded-full blur-3xl animate-float"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-coral-300/20 rounded-full blur-3xl animate-float"
           style={{ animationDelay: "1s" }}
         ></div>
         <div
-          className="absolute top-1/2 left-1/2 w-64 h-64 bg-yellow-300/20 rounded-full blur-3xl animate-float"
+          className="absolute top-1/2 left-1/2 w-64 h-64 bg-coral-300/20 rounded-full blur-3xl animate-float"
           style={{ animationDelay: "2s" }}
         ></div>
       </div>
@@ -27,21 +27,21 @@ export default function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-float">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            <span className="text-sm font-medium text-orange-900">
+            <span className="text-sm font-medium text-coral-900">
               AI-Powered Vedic Learning
             </span>
           </div>
 
           {/* Main heading */}
           <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
-            <span className="gradient-text">Rigveda AI</span>
+            <span className="gradient-text">Nirvāṇa</span>
           </h1>
 
-          <p className="text-2xl md:text-3xl text-orange-900/80 mb-4 font-medium">
+          <p className="text-2xl md:text-3xl text-coral-900/80 mb-4 font-medium">
             Ancient Wisdom Meets Modern Intelligence
           </p>
 
-          <p className="text-lg md:text-xl text-orange-800/60 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-coral-800/60 mb-12 max-w-3xl mx-auto leading-relaxed">
             Explore 3,500 years of sacred knowledge through AI-powered
             conversations, interactive quizzes, and intelligent search.
             Experience the Rigveda like never before.
@@ -52,7 +52,7 @@ export default function Hero() {
             <Link href="/chat">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white text-lg px-8 py-6 btn-hover shadow-2xl"
+                className="bg-gradient-to-r from-coral-500 to-coral-600 hover:from-coral-600 hover:to-coral-700 text-coral-50 text-lg px-8 py-6 btn-hover shadow-2xl"
               >
                 Start Exploring
                 <svg
@@ -78,7 +78,7 @@ export default function Hero() {
               }
               size="lg"
               variant="outline"
-              className="text-lg px-8 py-6 border-2 border-orange-400 text-orange-900 hover:bg-orange-100 btn-hover"
+              className="text-lg px-8 py-6 border-2 border-coral-400 text-coral-900 hover:bg-coral-100 btn-hover"
             >
               Learn More
             </Button>
@@ -88,22 +88,21 @@ export default function Hero() {
           <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div className="glass-dark rounded-2xl p-6 card-hover">
               <div className="text-4xl font-bold gradient-text mb-2">10</div>
-              <div className="text-sm text-orange-800/70">Mandalas</div>
+              <div className="text-sm text-coral-800/70">Mandalas</div>
             </div>
             <div className="glass-dark rounded-2xl p-6 card-hover">
               <div className="text-4xl font-bold gradient-text mb-2">1000+</div>
-              <div className="text-sm text-orange-800/70">Suktas</div>
+              <div className="text-sm text-coral-800/70">Suktas</div>
             </div>
             <div className="glass-dark rounded-2xl p-6 card-hover">
               <div className="text-4xl font-bold gradient-text mb-2">AI</div>
-              <div className="text-sm text-orange-800/70">Powered</div>
+              <div className="text-sm text-coral-800/70">Powered</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      
     </section>
   );
 }

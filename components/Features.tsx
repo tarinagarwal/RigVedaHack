@@ -7,21 +7,21 @@ export default function Features() {
       title: "AI Chatbot",
       description:
         "Ask questions about the Rigveda and get intelligent, context-aware responses powered by GPT-4.",
-      gradient: "from-orange-500 to-red-500",
+      gradient: "from-coral-500 to-coral-600",
     },
     {
       icon: "🎯",
       title: "Smart Quizzes",
       description:
         "Test your knowledge with AI-generated quizzes. Choose your difficulty and learn with instant feedback.",
-      gradient: "from-amber-500 to-orange-500",
+      gradient: "from-coral-400 to-coral-600",
     },
     {
       icon: "🔍",
       title: "Explore Suktas",
       description:
         "Search and browse through thousands of Suktas. Filter by Mandala and Sukta number to discover ancient wisdom.",
-      gradient: "from-yellow-500 to-amber-500",
+      gradient: "from-coral-300 to-coral-500",
     },
     {
       icon: "🌐",
@@ -39,7 +39,7 @@ export default function Features() {
           <h2 className="text-5xl md:text-6xl font-bold gradient-text mb-4">
             Powerful Features
           </h2>
-          <p className="text-xl text-orange-800/70 max-w-2xl mx-auto">
+          <p className="text-xl text-coral-800/70 max-w-2xl mx-auto">
             Everything you need to explore and learn the Rigveda
           </p>
         </div>
@@ -52,10 +52,10 @@ export default function Features() {
               >
                 {feature.icon}
               </div>
-              <h3 className="text-2xl font-bold text-orange-900 mb-4">
+              <h3 className="text-2xl font-bold text-coral-900 mb-4">
                 {feature.title}
               </h3>
-              <p className="text-orange-800/70 leading-relaxed">
+              <p className="text-coral-800/70 leading-relaxed">
                 {feature.description}
               </p>
             </div>
@@ -67,8 +67,8 @@ export default function Features() {
           <div className="glass-dark rounded-2xl p-6 flex items-start gap-4 card-hover">
             <div className="text-3xl">⚡</div>
             <div>
-              <h4 className="font-bold text-orange-900 mb-2">Lightning Fast</h4>
-              <p className="text-sm text-orange-800/70">
+              <h4 className="font-bold text-coral-900 mb-2">Lightning Fast</h4>
+              <p className="text-sm text-coral-800/70">
                 Instant responses with client-side caching
               </p>
             </div>
@@ -76,8 +76,8 @@ export default function Features() {
           <div className="glass-dark rounded-2xl p-6 flex items-start gap-4 card-hover">
             <div className="text-3xl">🎨</div>
             <div>
-              <h4 className="font-bold text-orange-900 mb-2">Beautiful UI</h4>
-              <p className="text-sm text-orange-800/70">
+              <h4 className="font-bold text-coral-900 mb-2">Beautiful UI</h4>
+              <p className="text-sm text-coral-800/70">
                 Modern, responsive design that works everywhere
               </p>
             </div>
@@ -85,10 +85,10 @@ export default function Features() {
           <div className="glass-dark rounded-2xl p-6 flex items-start gap-4 card-hover">
             <div className="text-3xl">🔒</div>
             <div>
-              <h4 className="font-bold text-orange-900 mb-2">
+              <h4 className="font-bold text-coral-900 mb-2">
                 No Login Required
               </h4>
-              <p className="text-sm text-orange-800/70">
+              <p className="text-sm text-coral-800/70">
                 Start exploring immediately, no barriers
               </p>
             </div>
@@ -96,10 +96,8 @@ export default function Features() {
           <div className="glass-dark rounded-2xl p-6 flex items-start gap-4 card-hover">
             <div className="text-3xl">📱</div>
             <div>
-              <h4 className="font-bold text-orange-900 mb-2">
-                Mobile Friendly
-              </h4>
-              <p className="text-sm text-orange-800/70">
+              <h4 className="font-bold text-coral-900 mb-2">Mobile Friendly</h4>
+              <p className="text-sm text-coral-800/70">
                 Perfect experience on any device
               </p>
             </div>

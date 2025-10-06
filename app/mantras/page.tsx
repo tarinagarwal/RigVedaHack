@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import MantrasInterface from "@/components/MantrasInterface";
+import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 
 export default function MantrasPage() {
@@ -18,7 +19,7 @@ export default function MantrasPage() {
                 Vedic Mantras
               </h1>
             </div>
-            <p className="text-xl text-orange-800/70">
+            <p className="text-xl text-coral-800/70">
               Listen to authentic Rigveda chanting
             </p>
           </div>
@@ -29,6 +30,7 @@ export default function MantrasPage() {
         </div>
       </main>
 
+      <Footer />
       <ScrollToTop />
     </div>
   );

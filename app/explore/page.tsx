@@ -5,6 +5,7 @@ import { RigvedaVerse } from "@/types/rigveda";
 import { loadAllVerses } from "@/lib/rigveda-data";
 import Navbar from "@/components/Navbar";
 import ExploreInterface from "@/components/ExploreInterface";
+import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 
 export default function ExplorePage() {
@@ -30,7 +31,7 @@ export default function ExplorePage() {
                 Explore Suktas
               </h1>
             </div>
-            <p className="text-xl text-orange-800/70">
+            <p className="text-xl text-coral-800/70">
               Search and browse through all Rigveda Suktas
             </p>
           </div>
@@ -38,12 +39,12 @@ export default function ExplorePage() {
           {loading ? (
             <div className="flex flex-col items-center justify-center py-20">
               <div className="relative">
-                <div className="w-20 h-20 border-4 border-orange-200 border-t-orange-600 rounded-full animate-spin"></div>
+                <div className="w-20 h-20 border-4 border-coral-200 border-t-coral-600 rounded-full animate-spin"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-2xl">🕉️</span>
                 </div>
               </div>
-              <p className="mt-6 text-lg text-orange-800/70 animate-pulse">
+              <p className="mt-6 text-lg text-coral-800/70 animate-pulse">
                 Loading sacred texts...
               </p>
             </div>
@@ -55,6 +56,7 @@ export default function ExplorePage() {
         </div>
       </main>
 
+      <Footer />
       <ScrollToTop />
     </div>
   );

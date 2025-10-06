@@ -117,26 +117,26 @@ export default function TranslationsInterface() {
   return (
     <div className="max-w-6xl mx-auto">
       {/* Search Section */}
-      <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-orange-200/50 mb-6">
+      <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-coral-200/50 mb-6">
         <h2 className="text-2xl font-bold gradient-text mb-6 text-center">
           Find a Sukta
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
           <div>
-            <label className="block text-sm font-semibold text-orange-900 mb-2">
+            <label className="block text-sm font-semibold text-coral-900 mb-2">
               📖 Mandala
             </label>
             <Select value={mandala} onValueChange={setMandala}>
-              <SelectTrigger className="h-12 rounded-xl border-2 border-orange-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-300 bg-white text-gray-900">
+              <SelectTrigger className="h-12 rounded-xl border-2 border-coral-200 focus:border-coral-400 focus:ring-2 focus:ring-coral-300 bg-white text-gray-900">
                 <SelectValue placeholder="Select Mandala..." />
               </SelectTrigger>
-              <SelectContent className="bg-white border-2 border-orange-200 rounded-xl shadow-2xl">
+              <SelectContent className="bg-white border-2 border-coral-200 rounded-xl shadow-2xl">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
                   <SelectItem
                     key={num}
                     value={num.toString()}
-                    className="cursor-pointer hover:bg-orange-50 focus:bg-orange-100 rounded-lg my-1"
+                    className="cursor-pointer hover:bg-coral-50 focus:bg-coral-100 rounded-lg my-1"
                   >
                     Mandala {num}
                   </SelectItem>
@@ -146,19 +146,19 @@ export default function TranslationsInterface() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-orange-900 mb-2">
+            <label className="block text-sm font-semibold text-coral-900 mb-2">
               ✨ Sukta {mandala && `(1-${availableSuktas.length})`}
             </label>
             <Select value={sukta} onValueChange={setSukta} disabled={!mandala}>
-              <SelectTrigger className="h-12 rounded-xl border-2 border-orange-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-300 bg-white text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed">
+              <SelectTrigger className="h-12 rounded-xl border-2 border-coral-200 focus:border-coral-400 focus:ring-2 focus:ring-coral-300 bg-white text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed">
                 <SelectValue placeholder="Select Sukta..." />
               </SelectTrigger>
-              <SelectContent className="bg-white border-2 border-orange-200 rounded-xl shadow-2xl max-h-[300px]">
+              <SelectContent className="bg-white border-2 border-coral-200 rounded-xl shadow-2xl max-h-[300px]">
                 {availableSuktas.map((num) => (
                   <SelectItem
                     key={num}
                     value={num.toString()}
-                    className="cursor-pointer hover:bg-orange-50 focus:bg-orange-100 rounded-lg my-1"
+                    className="cursor-pointer hover:bg-coral-50 focus:bg-coral-100 rounded-lg my-1"
                   >
                     Sukta {num}
                   </SelectItem>
@@ -168,19 +168,19 @@ export default function TranslationsInterface() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-orange-900 mb-2">
+            <label className="block text-sm font-semibold text-coral-900 mb-2">
               📝 Verse {sukta && `(1-${availableVerses.length})`}
             </label>
             <Select value={verse} onValueChange={setVerse} disabled={!sukta}>
-              <SelectTrigger className="h-12 rounded-xl border-2 border-orange-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-300 bg-white text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed">
+              <SelectTrigger className="h-12 rounded-xl border-2 border-coral-200 focus:border-coral-400 focus:ring-2 focus:ring-coral-300 bg-white text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed">
                 <SelectValue placeholder="Select Verse..." />
               </SelectTrigger>
-              <SelectContent className="bg-white border-2 border-orange-200 rounded-xl shadow-2xl max-h-[300px]">
+              <SelectContent className="bg-white border-2 border-coral-200 rounded-xl shadow-2xl max-h-[300px]">
                 {availableVerses.map((num) => (
                   <SelectItem
                     key={num}
                     value={num.toString()}
-                    className="cursor-pointer hover:bg-orange-50 focus:bg-orange-100 rounded-lg my-1"
+                    className="cursor-pointer hover:bg-coral-50 focus:bg-coral-100 rounded-lg my-1"
                   >
                     Verse {num}
                   </SelectItem>
@@ -193,7 +193,7 @@ export default function TranslationsInterface() {
             <Button
               onClick={handleFetch}
               disabled={loading || !mandala || !sukta || !verse}
-              className="flex-1 h-12 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white rounded-xl btn-hover shadow-lg disabled:opacity-50"
+              className="flex-1 h-12 bg-gradient-to-r from-coral-500 to-coral-600 hover:from-coral-600 hover:to-coral-700 text-coral-50 rounded-xl btn-hover shadow-lg disabled:opacity-50"
             >
               {loading ? (
                 <>
@@ -208,7 +208,7 @@ export default function TranslationsInterface() {
               <Button
                 onClick={handleClear}
                 variant="outline"
-                className="h-12 px-4 border-2 border-orange-300 text-orange-900 hover:bg-orange-100 rounded-xl"
+                className="h-12 px-4 border-2 border-coral-300 text-coral-900 hover:bg-coral-100 rounded-xl"
               >
                 Clear
               </Button>
@@ -234,7 +234,7 @@ export default function TranslationsInterface() {
       {document && (
         <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4">
           {/* Location Header */}
-          <div className="bg-gradient-to-r from-orange-500 to-amber-600 rounded-3xl p-6 text-white shadow-2xl">
+          <div className="bg-gradient-to-r from-coral-500 to-coral-600 rounded-3xl p-6 text-coral-50 shadow-2xl">
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-3xl font-bold mb-2">
@@ -247,17 +247,17 @@ export default function TranslationsInterface() {
                     )}
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  <Badge className="bg-white/20 text-white border-white/30">
+                  <Badge className="bg-white/20 text-coral-50 border-white/30">
                     📖 Mandala {document.book}
                   </Badge>
-                  <Badge className="bg-white/20 text-white border-white/30">
+                  <Badge className="bg-white/20 text-coral-50 border-white/30">
                     ✨ Sukta {document.hymn}
                   </Badge>
-                  <Badge className="bg-white/20 text-white border-white/30">
+                  <Badge className="bg-white/20 text-coral-50 border-white/30">
                     📝 Verse {document.stanza}
                   </Badge>
                   {document.hymnAddressee && (
-                    <Badge className="bg-white/20 text-white border-white/30">
+                    <Badge className="bg-white/20 text-coral-50 border-white/30">
                       🙏 {document.hymnAddressee}
                     </Badge>
                   )}
@@ -268,7 +268,7 @@ export default function TranslationsInterface() {
 
           {/* Original Text Versions */}
           {originalVersions.length > 0 && (
-            <Card className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-orange-200/50">
+            <Card className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-coral-200/50">
               <h4 className="text-2xl font-bold gradient-text mb-6 flex items-center gap-2">
                 <span>📜</span> Original Sanskrit Text
               </h4>
@@ -280,18 +280,18 @@ export default function TranslationsInterface() {
                   return (
                     <div
                       key={idx}
-                      className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 border-2 border-orange-100"
+                      className="bg-gradient-to-br from-coral-50 to-coral-50 rounded-2xl p-6 border-2 border-coral-100"
                     >
                       <div className="flex items-center gap-2 mb-3">
                         <Badge
                           variant="outline"
-                          className="border-orange-300 text-orange-900 bg-white"
+                          className="border-coral-300 text-coral-900 bg-white"
                         >
                           {version.source}
                         </Badge>
                         <Badge
                           variant="outline"
-                          className="border-orange-200 text-orange-800 bg-white text-xs"
+                          className="border-coral-200 text-coral-800 bg-white text-xs"
                         >
                           {version.language}
                         </Badge>
@@ -308,7 +308,7 @@ export default function TranslationsInterface() {
 
           {/* Translations */}
           {translations.length > 0 ? (
-            <Card className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-orange-200/50">
+            <Card className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-coral-200/50">
               <h4 className="text-2xl font-bold gradient-text mb-6 flex items-center gap-2">
                 <span>🌐</span> Translations ({translations.length})
               </h4>
@@ -354,7 +354,7 @@ export default function TranslationsInterface() {
               </div>
             </Card>
           ) : (
-            <Card className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-orange-200/50 text-center">
+            <Card className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-coral-200/50 text-center">
               <div className="text-6xl mb-4">📚</div>
               <h4 className="text-xl font-bold text-gray-700 mb-2">
                 No Translations Available
@@ -367,25 +367,25 @@ export default function TranslationsInterface() {
 
           {/* Additional Metadata */}
           {(document.strata || document.hymnGroup) && (
-            <Card className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border border-orange-200/50">
+            <Card className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border border-coral-200/50">
               <h4 className="text-lg font-bold gradient-text mb-3">
                 Additional Information
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {document.strata && (
-                  <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-4">
-                    <p className="text-sm text-orange-700 font-semibold mb-1">
+                  <div className="bg-gradient-to-br from-coral-50 to-coral-50 rounded-xl p-4">
+                    <p className="text-sm text-coral-700 font-semibold mb-1">
                       Strata
                     </p>
-                    <p className="text-orange-900">{document.strata}</p>
+                    <p className="text-coral-900">{document.strata}</p>
                   </div>
                 )}
                 {document.hymnGroup && (
-                  <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-4">
-                    <p className="text-sm text-orange-700 font-semibold mb-1">
+                  <div className="bg-gradient-to-br from-coral-50 to-coral-50 rounded-xl p-4">
+                    <p className="text-sm text-coral-700 font-semibold mb-1">
                       Hymn Group
                     </p>
-                    <p className="text-orange-900">{document.hymnGroup}</p>
+                    <p className="text-coral-900">{document.hymnGroup}</p>
                   </div>
                 )}
               </div>
@@ -396,14 +396,14 @@ export default function TranslationsInterface() {
 
       {/* Empty State */}
       {!document && !loading && !error && (
-        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-16 text-center shadow-2xl border border-orange-200/50">
-          <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-5xl animate-float">
+        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-16 text-center shadow-2xl border border-coral-200/50">
+          <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-coral-500 to-coral-600 flex items-center justify-center text-5xl animate-float">
             🌐
           </div>
           <h3 className="text-3xl font-bold gradient-text mb-4">
             Discover Translations
           </h3>
-          <p className="text-lg text-orange-800/70 mb-6">
+          <p className="text-lg text-coral-800/70 mb-6">
             Select a Mandala, Sukta, and Verse above to view translations from
             various scholars
           </p>

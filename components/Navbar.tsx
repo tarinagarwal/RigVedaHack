@@ -22,17 +22,19 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-xl border-b border-orange-200/50 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-xl border-b border-coral-200/50 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 cursor-pointer">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center shadow-lg animate-glow">
-              <span className="text-2xl"></span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Nirvāṇa"
+              className="w-16 h-16 object-contain"
+            />
             <div>
-              <h1 className="text-2xl font-bold gradient-text">Rigveda AI</h1>
-              <p className="text-xs text-orange-600/70">
+              <h1 className="text-2xl font-bold gradient-text">Nirvāṇa</h1>
+              <p className="text-xs text-coral-600/70">
                 Ancient Wisdom, Modern Intelligence
               </p>
             </div>
@@ -46,8 +48,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-4 py-2 rounded-xl font-medium transition-all duration-300 ${
                   isActive(link.href)
-                    ? "bg-gradient-to-r from-orange-500 to-amber-600 text-white shadow-lg scale-105"
-                    : "text-orange-900 hover:text-orange-600 hover:bg-orange-100/80 hover:backdrop-blur-sm hover:scale-105"
+                    ? "bg-gradient-to-r from-coral-500 to-coral-600 text-coral-50 shadow-lg scale-105"
+                    : "text-coral-900 hover:text-coral-600 hover:bg-coral-100/80 hover:backdrop-blur-sm hover:scale-105"
                 }`}
               >
                 {link.label}
@@ -58,10 +60,10 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-xl hover:bg-orange-100/80 backdrop-blur-sm transition-all duration-300 hover:scale-110"
+            className="md:hidden p-2 rounded-xl hover:bg-coral-100/80 backdrop-blur-sm transition-all duration-300 hover:scale-110"
           >
             <svg
-              className="w-6 h-6 text-orange-900"
+              className="w-6 h-6 text-coral-900"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -80,7 +82,7 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="md:hidden py-4 space-y-2 border-t border-orange-200/50 bg-white/80 backdrop-blur-lg rounded-b-2xl -mx-4 px-4 shadow-xl">
+          <div className="md:hidden py-4 space-y-2 border-t border-coral-200/50 bg-white/80 backdrop-blur-lg rounded-b-2xl -mx-4 px-4 shadow-xl">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -88,8 +90,8 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`block w-full text-left px-4 py-3 rounded-xl transition-all ${
                   isActive(link.href)
-                    ? "bg-gradient-to-r from-orange-500 to-amber-600 text-white shadow-lg"
-                    : "text-orange-900 hover:bg-orange-100/80 backdrop-blur-sm"
+                    ? "bg-gradient-to-r from-coral-500 to-coral-600 text-coral-50 shadow-lg"
+                    : "text-coral-900 hover:bg-coral-100/80 backdrop-blur-sm"
                 }`}
               >
                 {link.label}

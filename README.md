@@ -1,4 +1,4 @@
-# 🕉️ Rigveda AI
+# 🕉️ Nirvāṇa
 
 An interactive web application that brings the ancient wisdom of the Rigveda to the modern world through AI-powered exploration, translations, and authentic Vedic chanting.
 

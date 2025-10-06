@@ -91,9 +91,9 @@ export default function QuizInterface({ verses }: Props) {
     const percentage = (score / questions.length) * 100;
     return (
       <div className="max-w-3xl mx-auto">
-        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-12 text-center shadow-2xl border border-orange-200/50">
+        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-12 text-center shadow-2xl border border-coral-200/50">
           <div className="mb-8">
-            <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-5xl animate-bounce">
+            <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-coral-500 to-coral-600 flex items-center justify-center text-5xl animate-bounce">
               🎉
             </div>
             <h2 className="text-4xl font-bold gradient-text mb-4">
@@ -101,11 +101,11 @@ export default function QuizInterface({ verses }: Props) {
             </h2>
           </div>
 
-          <div className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl p-8 mb-8">
+          <div className="bg-gradient-to-br from-coral-100 to-coral-100 rounded-2xl p-8 mb-8">
             <div className="text-7xl font-bold gradient-text mb-2">
               {score}/{questions.length}
             </div>
-            <p className="text-2xl text-orange-800">
+            <p className="text-2xl text-coral-800">
               You scored {percentage.toFixed(0)}%
             </p>
           </div>
@@ -114,18 +114,11 @@ export default function QuizInterface({ verses }: Props) {
             <Button
               onClick={restartQuiz}
               size="lg"
-              className="bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white btn-hover shadow-lg"
+              className="border-2 bg-gradient-to-r from-coral-500 to-coral-600 hover:from-coral-600 hover:to-coral-700 text-coral-50 btn-hover shadow-lg"
             >
               🔄 New Quiz
             </Button>
-            <Button
-              variant="outline"
-              onClick={() => setShowResult(false)}
-              size="lg"
-              className="border-2 border-orange-400 text-orange-900 hover:bg-orange-100 btn-hover"
-            >
-              📝 Review Answers
-            </Button>
+            
           </div>
         </div>
       </div>
@@ -135,21 +128,21 @@ export default function QuizInterface({ verses }: Props) {
   if (questions.length === 0) {
     return (
       <div className="max-w-3xl mx-auto">
-        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-12 shadow-2xl border border-orange-200/50">
+        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-12 shadow-2xl border border-coral-200/50">
           <div className="text-center mb-8">
-            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-4xl">
+            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-coral-500 to-coral-600 flex items-center justify-center text-4xl">
               🎯
             </div>
             <h2 className="text-4xl font-bold gradient-text mb-4">
               Generate a Quiz
             </h2>
-            <p className="text-lg text-orange-800/70">
+            <p className="text-lg text-coral-800/70">
               Test your knowledge of the Rigveda with AI-generated questions
             </p>
           </div>
 
           <div className="mb-8">
-            <label className="block text-sm font-semibold text-orange-900 mb-4 text-center">
+            <label className="block text-sm font-semibold text-coral-900 mb-4 text-center">
               Select Difficulty Level
             </label>
             <div className="flex gap-3 justify-center">
@@ -161,8 +154,8 @@ export default function QuizInterface({ verses }: Props) {
                   onClick={() => setDifficulty(level)}
                   className={
                     difficulty === level
-                      ? "bg-gradient-to-r from-orange-500 to-amber-600 text-white shadow-lg"
-                      : "border-2 border-orange-300 text-orange-900 hover:bg-orange-100"
+                      ? "bg-gradient-to-r from-coral-500 to-coral-600 text-coral-50 shadow-lg"
+                      : "border-2 border-coral-300 text-coral-900 hover:bg-coral-100"
                   }
                 >
                   {level === "easy" && "😊"} {level === "medium" && "🤔"}{" "}
@@ -177,7 +170,7 @@ export default function QuizInterface({ verses }: Props) {
             onClick={generateQuiz}
             disabled={loading}
             size="lg"
-            className="w-full bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white text-lg py-6 btn-hover shadow-xl"
+            className="w-full bg-gradient-to-r border-2 from-coral-500 to-coral-600 hover:from-coral-600 hover:to-coral-700 text-coral-50 text-lg py-6 btn-hover shadow-xl"
           >
             {loading ? (
               <>
@@ -197,18 +190,18 @@ export default function QuizInterface({ verses }: Props) {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-orange-200/50">
+      <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-coral-200/50">
         <div className="flex justify-between items-center mb-8">
-          <Badge className="bg-gradient-to-r from-orange-500 to-amber-600 text-white px-4 py-2 text-sm">
+          <Badge className="bg-gradient-to-r from-coral-500 to-coral-600 text-coral-50 px-4 py-2 text-sm">
             Question {currentQuestion + 1} of {questions.length}
           </Badge>
-          <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 text-sm">
+          <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-green-50 px-4 py-2 text-sm">
             Score: {score}
           </Badge>
         </div>
 
         <div className="mb-8">
-          <h3 className="text-2xl font-bold text-orange-900 mb-6 leading-relaxed">
+          <h3 className="text-2xl font-bold text-coral-900 mb-6 leading-relaxed">
             {question.question}
           </h3>
 
@@ -231,8 +224,8 @@ export default function QuizInterface({ verses }: Props) {
                       : showIncorrect
                       ? "border-red-500 bg-red-50 shadow-lg"
                       : isSelected
-                      ? "border-orange-500 bg-orange-50"
-                      : "border-orange-200 hover:border-orange-400 hover:bg-orange-50 hover:shadow-md"
+                      ? "border-coral-500 bg-coral-50"
+                      : "border-coral-200 hover:border-coral-400 hover:bg-coral-50 hover:shadow-md"
                   } ${
                     selectedAnswer === null
                       ? "cursor-pointer"
@@ -243,10 +236,10 @@ export default function QuizInterface({ verses }: Props) {
                     <div
                       className={`w-8 h-8 rounded-full flex items-center justify-center font-bold ${
                         showCorrect
-                          ? "bg-green-500 text-white"
+                          ? "bg-green-500 text-green-50"
                           : showIncorrect
-                          ? "bg-red-500 text-white"
-                          : "bg-orange-100 text-orange-900"
+                          ? "bg-red-500 text-red-50"
+                          : "bg-coral-100 text-coral-900"
                       }`}
                     >
                       {showCorrect
@@ -283,7 +276,7 @@ export default function QuizInterface({ verses }: Props) {
           <Button
             onClick={nextQuestion}
             size="lg"
-            className="w-full bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white btn-hover shadow-lg"
+            className="w-full border-2 bg-gradient-to-r from-coral-500 to-coral-600 hover:from-coral-600 hover:to-coral-700 text-coral-50 btn-hover shadow-lg"
           >
             {currentQuestion < questions.length - 1
               ? "Next Question →"

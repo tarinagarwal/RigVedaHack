@@ -15,7 +15,7 @@ export default function ChatInterface({ verses }: Props) {
     {
       role: "assistant",
       content:
-        "Namaste! 🙏 I am your Rigveda AI assistant. Ask me anything about the Rigveda, its verses, meanings, or historical context.",
+        "Namaste! 🙏 I am your Nirvāṇa assistant. Ask me anything about the Rigveda, its verses, meanings, or historical context.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -71,7 +71,7 @@ export default function ChatInterface({ verses }: Props) {
 
   return (
     <div className="max-w-5xl mx-auto">
-      <div className="bg-white/60 backdrop-blur-sm rounded-2xl shadow-xl border border-orange-200/50 overflow-hidden">
+      <div className="bg-white/60 backdrop-blur-sm rounded-2xl shadow-xl border border-coral-200/50 overflow-hidden">
         <ScrollArea className="h-[500px] p-6" ref={scrollRef}>
           <div className="space-y-6">
             {messages.map((msg, idx) => (
@@ -84,21 +84,21 @@ export default function ChatInterface({ verses }: Props) {
                 <div
                   className={`max-w-[85%] rounded-2xl p-5 shadow-lg ${
                     msg.role === "user"
-                      ? "bg-gradient-to-br from-orange-500 to-amber-600 text-white"
-                      : "bg-white border border-orange-100"
+                      ? "bg-gradient-to-br from-coral-500 to-coral-600 text-coral-50"
+                      : "bg-white border border-coral-100"
                   }`}
                 >
                   {msg.role === "assistant" && (
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-xl">🕉️</span>
-                      <span className="text-xs font-semibold text-orange-600">
-                        Rigveda AI
+                      <span className="text-xs font-semibold text-coral-600">
+                        Nirvāṇa
                       </span>
                     </div>
                   )}
                   <p
                     className={`whitespace-pre-wrap leading-relaxed ${
-                      msg.role === "user" ? "text-white" : "text-gray-800"
+                      msg.role === "user" ? "text-coral-50" : "text-gray-800"
                     }`}
                   >
                     {msg.content}
@@ -108,21 +108,21 @@ export default function ChatInterface({ verses }: Props) {
             ))}
             {loading && (
               <div className="flex justify-start animate-in fade-in slide-in-from-bottom-4">
-                <div className="bg-white border border-orange-100 rounded-2xl p-5 shadow-lg">
+                <div className="bg-white border border-coral-100 rounded-2xl p-5 shadow-lg">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-xl">🕉️</span>
-                    <span className="text-xs font-semibold text-orange-600">
-                      Rigveda AI
+                    <span className="text-xs font-semibold text-coral-600">
+                      Nirvāṇa
                     </span>
                   </div>
                   <div className="flex space-x-2">
-                    <div className="w-2 h-2 bg-orange-400 rounded-full animate-bounce"></div>
+                    <div className="w-2 h-2 bg-coral-400 rounded-full animate-bounce"></div>
                     <div
-                      className="w-2 h-2 bg-orange-400 rounded-full animate-bounce"
+                      className="w-2 h-2 bg-coral-400 rounded-full animate-bounce"
                       style={{ animationDelay: "0.1s" }}
                     ></div>
                     <div
-                      className="w-2 h-2 bg-orange-400 rounded-full animate-bounce"
+                      className="w-2 h-2 bg-coral-400 rounded-full animate-bounce"
                       style={{ animationDelay: "0.2s" }}
                     ></div>
                   </div>
@@ -132,7 +132,7 @@ export default function ChatInterface({ verses }: Props) {
           </div>
         </ScrollArea>
 
-        <div className="p-6 bg-gradient-to-r from-orange-50 to-amber-50 border-t border-orange-200/50">
+        <div className="p-6 bg-gradient-to-r from-coral-50 to-coral-50 border-t border-coral-200/50">
           <div className="flex gap-3">
             <Input
               value={input}
@@ -140,12 +140,12 @@ export default function ChatInterface({ verses }: Props) {
               onKeyPress={(e) => e.key === "Enter" && handleSend()}
               placeholder="Ask about the Rigveda..."
               disabled={loading}
-              className="flex-1 h-12 px-4 rounded-xl border-2 border-orange-200 focus:border-orange-400 bg-white/80 backdrop-blur-sm"
+              className="flex-1 h-12 px-4 rounded-xl border-2 border-coral-200 focus:border-coral-400 bg-white/80 backdrop-blur-sm"
             />
             <Button
               onClick={handleSend}
               disabled={loading || !input.trim()}
-              className="h-12 px-6 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white rounded-xl btn-hover shadow-lg disabled:opacity-50"
+              className="h-12 px-6 border-3 bg-gradient-to-r from-coral-500 to-coral-600 hover:from-coral-600 hover:to-coral-700 text-coral-50 rounded-xl btn-hover shadow-lg disabled:opacity-50"
             >
               <svg
                 className="w-5 h-5"
@@ -162,9 +162,7 @@ export default function ChatInterface({ verses }: Props) {
               </svg>
             </Button>
           </div>
-          <p className="text-xs text-orange-600/60 mt-3 text-center">
-            Powered by OpenAI GPT-4 • Ask anything about the Rigveda
-          </p>
+          
         </div>
       </div>
     </div>

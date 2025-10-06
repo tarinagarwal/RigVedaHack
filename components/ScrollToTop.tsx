@@ -32,7 +32,7 @@ export default function ScrollToTop() {
       {isVisible && (
         <Button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white shadow-2xl btn-hover animate-in fade-in slide-in-from-bottom-4"
+          className="fixed bottom-8 border-2 right-8 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-coral-500 to-coral-600 hover:from-coral-600 hover:to-coral-700 text-coral-50 shadow-2xl btn-hover animate-in fade-in slide-in-from-bottom-4"
           size="icon"
         >
           <svg

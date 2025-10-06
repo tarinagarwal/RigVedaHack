@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import TranslationsInterface from "@/components/TranslationsInterface";
+import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 
 export default function TranslationsPage() {
@@ -19,7 +20,7 @@ export default function TranslationsPage() {
                 Translations
               </h1>
             </div>
-            <p className="text-xl text-orange-800/70">
+            <p className="text-xl text-coral-800/70">
               View Rigveda Suktas with multiple translations
             </p>
           </div>
@@ -30,6 +31,7 @@ export default function TranslationsPage() {
         </div>
       </main>
 
+      <Footer />
       <ScrollToTop />
     </div>
   );

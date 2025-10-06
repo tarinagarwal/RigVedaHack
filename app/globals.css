@@ -5,8 +5,99 @@
 }
 
 body {
-  background: linear-gradient(to bottom right, #fffbeb, #ffedd5, #fef3c7);
-  font-family: var(--font-fedorka), system-ui, -apple-system, sans-serif;
+  background: radial-gradient(
+      ellipse 800px 600px at 10% 15%,
+      rgba(255, 200, 150, 0.6) 0%,
+      rgba(255, 200, 150, 0.3) 30%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 900px 700px at 90% 10%,
+      rgba(255, 180, 140, 0.5) 0%,
+      rgba(255, 180, 140, 0.2) 35%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 700px 900px at 30% 40%,
+      rgba(232, 155, 122, 0.4) 0%,
+      rgba(232, 155, 122, 0.15) 40%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 1000px 800px at 75% 45%,
+      rgba(255, 210, 170, 0.5) 0%,
+      rgba(255, 210, 170, 0.2) 35%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 600px 800px at 15% 70%,
+      rgba(216, 138, 107, 0.45) 0%,
+      rgba(216, 138, 107, 0.2) 40%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 850px 650px at 95% 80%,
+      rgba(255, 190, 150, 0.4) 0%,
+      rgba(255, 190, 150, 0.15) 35%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 750px 950px at 5% 90%,
+      rgba(232, 155, 122, 0.5) 0%,
+      rgba(232, 155, 122, 0.2) 38%,
+      transparent 68%
+    ),
+    radial-gradient(
+      ellipse 900px 700px at 55% 95%,
+      rgba(255, 220, 180, 0.45) 0%,
+      rgba(255, 220, 180, 0.18) 40%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 650px 850px at 40% 5%,
+      rgba(255, 195, 160, 0.4) 0%,
+      rgba(255, 195, 160, 0.15) 38%,
+      transparent 68%
+    ),
+    radial-gradient(
+      ellipse 800px 600px at 60% 55%,
+      rgba(240, 170, 130, 0.35) 0%,
+      rgba(240, 170, 130, 0.12) 35%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 700px 900px at 82% 38%,
+      rgba(255, 205, 165, 0.4) 0%,
+      rgba(255, 205, 165, 0.15) 40%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 950px 750px at 18% 52%,
+      rgba(250, 185, 145, 0.45) 0%,
+      rgba(250, 185, 145, 0.18) 38%,
+      transparent 68%
+    ),
+    radial-gradient(
+      ellipse 600px 800px at 48% 25%,
+      rgba(255, 175, 135, 0.35) 0%,
+      rgba(255, 175, 135, 0.12) 35%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 850px 650px at 68% 72%,
+      rgba(245, 195, 155, 0.4) 0%,
+      rgba(245, 195, 155, 0.15) 40%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 750px 900px at 25% 88%,
+      rgba(238, 165, 125, 0.38) 0%,
+      rgba(238, 165, 125, 0.14) 38%,
+      transparent 68%
+    ),
+    #fff5e6;
+  background-attachment: fixed;
+  font-family: system-ui, -apple-system, sans-serif;
   min-height: 100vh;
 }
 
@@ -28,12 +119,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(251, 146, 60, 0.6);
+  background: rgba(216, 113, 99, 0.6);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(249, 115, 22, 0.8);
+  background: rgba(216, 113, 99, 0.8);
 }
 
 /* Animations */
@@ -50,10 +141,10 @@ body {
 @keyframes glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(251, 146, 60, 0.3);
+    box-shadow: 0 0 20px rgba(216, 113, 99, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(251, 146, 60, 0.6);
+    box-shadow: 0 0 40px rgba(216, 113, 99, 0.6);
   }
 }
 
@@ -67,7 +158,7 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(to right, #ea580c, #d97706, #ea580c);
+  background: linear-gradient(to right, #d87163, #c85a4d, #d87163);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -83,10 +174,10 @@ body {
 }
 
 .glass-dark {
-  background: rgba(124, 45, 18, 0.1);
+  background: rgba(216, 113, 99, 0.1);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(251, 146, 60, 0.2);
+  border: 1px solid rgba(216, 113, 99, 0.2);
 }
 
 /* Button hover effects */
